@@ -1,7 +1,6 @@
 ---
 title: Pet Service Enhancements
 ---
-# Pet Service Enhancements
 
 ## Code Review
 Before beginning the enhancements on this old project, I performed a [code review](https://www.youtube.com/watch?v=PPhrifNOcAw) on the original code.
