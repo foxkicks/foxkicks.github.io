@@ -1,7 +1,7 @@
 ---
 title: Pet Service Enhancements
-category: School
-tags: [CS-499, Capstone, PetService]
+categories: [SCHOOL]
+tags: [capstone, petservice]
 ---
 
 ## Code Review
