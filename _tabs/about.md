@@ -10,6 +10,16 @@ Most of that experience comes from my courses, but some of it comes from persona
 electives in my time at SNHU were dedicated to game development. The classes focused on Unreal Engine, and I've made a few incomplete games using it by now. Below is a list of
 projects from my "practice" repository, where I keep all of my smaller programs that were used for reinforcement learning.
 
+# Spin the Wheel V2
+
+This is a WinForms program that accepts .txt files (one line per entry) and stores lists in databases to randomize.
+
+- Create your own wheel manually OR choose a TXT file to create one.
+- Click spin to randomly pick something from the list.
+- The list keeps track of how many times an item was picked.
+
+Download: <https://github.com/foxkicks/Practice/releases/tag/SpinTheWheel-GUI>
+
 # Roll Any Dice GUI
 
 This is my first WinForms program, and my first time using C#.
@@ -22,7 +32,7 @@ This is my first WinForms program, and my first time using C#.
 
 ![image](https://github.com/foxkicks/practice/assets/156107200/beee954f-faf4-4c9a-9231-82670311f068)
 
-Download: https://github.com/foxkicks/practice/releases/tag/RollAnyDiceGUI
+Download: <https://github.com/foxkicks/practice/releases/tag/RollAnyDiceGUI>
 
 # Spin The Wheel
 
@@ -36,46 +46,46 @@ This is a console program with the following features:
 
 • Randomly pick an item from the list
 
-Download: https://github.com/foxkicks/practice/releases/tag/SpinTheWheel
+Download: <https://github.com/foxkicks/practice/releases/tag/SpinTheWheel>
 
 # Cold One - Bar Management
 
 A game made in command prompt based on a D&D session I ran.
 
-Download: https://github.com/foxkicks/practice/releases/tag/ColdOne
+Download: <https://github.com/foxkicks/practice/releases/tag/ColdOne>
 
 # Roll Any Dice
 
 A random number generator using user input.
 
-Download: https://github.com/foxkicks/practice/releases/tag/RollAnyDice
+Download: <https://github.com/foxkicks/practice/releases/tag/RollAnyDice>
 
 # Rock Paper Scissors
 
 A console program that's a simple looping game of Rock, Paper, Scissors. Your score is kept until the program is exited.
 
-Download: https://github.com/foxkicks/practice/releases/tag/RockPaperScissors-v2
+Download: <https://github.com/foxkicks/practice/releases/tag/RockPaperScissors-v2>
 
 # Move Something
 
 A console program where user input decides where the user chosen characters move in a command prompt.
 
-Download: https://github.com/foxkicks/practice/releases/tag/MoveSomething
+Download: <https://github.com/foxkicks/practice/releases/tag/MoveSomething>
 
 # Magic 8-Ball
 
 Console program that generated a random response, mimicking the toy of the same name.
 
-Download: https://github.com/foxkicks/practice/releases/tag/Magic8Ball
+Download: <https://github.com/foxkicks/practice/releases/tag/Magic8Ball>
 
 # Lyrics Reader
 
 Reads and prints each line of a txt file as the user taps an input button.
 
-Download: https://github.com/foxkicks/practice/releases/tag/LyricsReader
+Download: <https://github.com/foxkicks/practice/releases/tag/LyricsReader>
 
 # Get ASCII Value
 
 Takes user input as a string and converts each character to its ASCII value.
 
-Download: https://github.com/foxkicks/practice/releases/tag/GetASCII
+Download: <https://github.com/foxkicks/practice/releases/tag/GetASCII>
