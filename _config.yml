@@ -98,7 +98,7 @@ theme_mode: dark # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://static.wikia.nocookie.net/yugioh/images/3/34/Hoshiningen-TF04-JP-VG.jpg/revision/latest?cb=20121031174628&path-prefix=it
+avatar: /assets/images/Hoshiningen.jpg
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
