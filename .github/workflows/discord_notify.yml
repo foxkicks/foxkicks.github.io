@@ -34,5 +34,5 @@ jobs:
           # 5. Send to Discord via CURL
           curl -H "Content-Type: application/json" \
                -X POST \
-               -d "{\"content\": \"**New Post from FoxKicks!**\n\nCheckout the latest update: **$SLUG**\nRead more here: $FINAL_URL\"}" \
+               -d "{\"content\": \"**New Post from FoxKicks!**\n$FINAL_URL\"}" \
                ${{ secrets.DISCORD_WEBHOOK }}
