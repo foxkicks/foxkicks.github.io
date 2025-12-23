@@ -1,0 +1,21 @@
+name: Discord Notification
+on:
+  push:
+    branches:
+      - main  # Trigger when you push to main
+    paths:
+      - '_posts/**' # Only trigger if files in _posts are changed
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Discord Message
+        uses: appleboy/discord-action@master
+        with:
+          webhook_id: ${{ secrets.DISCORD_WEBHOOK_ID }}
+          webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
+          message: |
+            **New Blog Post Published!** 🚀
+            Check out the latest update on my Chirpy site:
+            https://yourusername.github.io/
