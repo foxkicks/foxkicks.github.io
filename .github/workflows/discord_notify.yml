@@ -1,21 +1,38 @@
-name: Discord Notification
+name: Discord Post Notify
 on:
   push:
     branches:
-      - main  # Trigger when you push to main
+      - main
     paths:
-      - '_posts/**' # Only trigger if files in _posts are changed
+      - '_posts/**'
 
 jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Discord Message
-        uses: appleboy/discord-action@master
+      - name: Checkout code
+        uses: actions/checkout@v4
         with:
-          webhook_id: ${{ secrets.DISCORD_WEBHOOK_ID }}
-          webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
-          message: |
-            **New Blog Post Published!** 🚀
-            Check out the latest update on my Chirpy site:
-            https://foxkicks.github.io/
+          fetch-depth: 2 # Necessary to compare the last two commits
+
+      - name: Get Post Info and Notify
+        run: |
+          # 1. Identify the new file in _posts
+          NEW_POST=$(git diff --name-only HEAD^ HEAD | grep '_posts/' | head -n 1)
+          
+          # 2. Extract the date and title from filename (e.g., 2023-10-27-hello-world.md)
+          # This removes the path and the .md extension
+          FILENAME=$(basename "$NEW_POST" .md)
+          
+          # 3. Chirpy URLs usually strip the date: /posts/hello-world/
+          # We extract everything after the third hyphen
+          SLUG=$(echo $FILENAME | cut -d'-' -f4-)
+          
+          # 4. Construct the Final URL (Replace with your actual domain)
+          FINAL_URL="https://foxkicks.github.io/posts/$SLUG/"
+          
+          # 5. Send to Discord via CURL
+          curl -H "Content-Type: application/json" \
+               -X POST \
+               -d "{\"content\": \"**New Post from FoxKicks!**\n\nCheckout the latest update: **$SLUG**\nRead more here: $FINAL_URL\"}" \
+               ${{ secrets.DISCORD_WEBHOOK }}
